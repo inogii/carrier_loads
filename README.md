@@ -1,4 +1,4 @@
-# Carrier Loads Use Case 🚛
+# 🚛 Carrier Loads Use Case
 
 This use case leverage the HappyRobot platform to implement a carrier sales representative that negotiates directly with carriers in order to sell loads. 
 
@@ -12,7 +12,7 @@ This use case leverage the HappyRobot platform to implement a carrier sales repr
 
 This use case has a hybrid deployment, including both an agent in the HappyRobot platform and some APIs in the cloud.
 
-### Step 1: Cloud API endpoint deployment 🚀
+### 🚀 Step 1: Cloud API endpoint deployment
 
 For this use case, the cloud vendor choice has been [fly.io](https://fly.io), since it has pretty affordable cloud deployments. For this reason, ensure you have flyctl installed in your environment. You can find more details on flyctl installation [here](https://fly.io/docs/flyctl/). The cloud endpoints can be easily deployed by running the following commands.
 
@@ -39,7 +39,7 @@ flyctl launch
 You can customize the type of cloud instance, but the minimal one will suffice for this endpoint.
 
 
-### Step 2: HappyRobot Agent Deployment
+### 🤖 Step 2: HappyRobot Agent Deployment
 
 Once you have your two APIs deployed in the cloud, it is time for us to deploy the agent in the HappyRobot Platform. 
 
