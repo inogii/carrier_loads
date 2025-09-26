@@ -1,0 +1,22 @@
+services:
+  fmcsa_fake:
+    build:
+      context: ./fmcsa_fake   # path to your FMCSA facade folder
+    container_name: fmcsa_fake
+    ports:
+      - "8001:8002"           # expose container's 8000 on host 8001
+    environment:
+      - API_KEY=dev-secret
+      - FMCSA_CACHE_PATH=data/fmcsa_cache.csv
+    restart: unless-stopped
+
+  carrier_loads:
+    build:
+      context: ./carrier_loads  # path to your Carrier Loads folder
+    container_name: carrier_loads
+    ports:
+      - "8002:8002"             # expose container's 8000 on host 8002
+    environment:
+      - API_KEY=dev-secret
+      - LOADS_PATH=data/loads.csv
+    restart: unless-stopped

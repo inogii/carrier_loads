@@ -1,0 +1,6 @@
+load_id,origin,destination,pickup_datetime,delivery_datetime,equipment_type,loadboard_rate,notes,weight,commodity_type,num_of_pieces,miles,dimensions
+L001,Chicago IL,Dallas TX,2025-09-28T08:00:00,2025-09-29T18:00:00,Van,2500,Fragile goods,20000,Electronics,500,925,48x40x60
+L002,Los Angeles CA,Phoenix AZ,2025-09-27T07:00:00,2025-09-27T20:00:00,Flatbed,1200,Open deck load,15000,Steel,100,370,60x48x72
+L003,Atlanta GA,Miami FL,2025-09-30T09:00:00,2025-10-01T17:00:00,Reefer,1800,Keep refrigerated,10000,Produce,200,660,40x40x65
+L004,New York NY,Boston MA,2025-09-27T06:00:00,2025-09-27T15:00:00,Van,800,Priority delivery,5000,Clothing,300,215,48x40x45
+L005,Houston TX,Chicago IL,2025-10-02T08:00:00,2025-10-03T21:00:00,Van,2700,Time sensitive,18000,Furniture,400,1080,52x48x70

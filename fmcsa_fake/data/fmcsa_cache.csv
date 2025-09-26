@@ -1,0 +1,6 @@
+mc,dot,carrier_name,status,insurance_ok,authority_ok,reason
+123456,987654,Alpha Logistics LLC,active,true,true,
+654321,123987,Beta Transport Inc,active,false,true,Insurance not on file
+111222,555111,Gamma Freight Co,inactive,true,true,Authority inactive
+222333,666222,Delta Carriers LLC,active,true,false,Operating authority not granted
+333444,777333,Epsilon Haulage Ltd,active,true,true,
