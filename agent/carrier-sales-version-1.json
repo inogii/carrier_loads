@@ -1,0 +1,1501 @@
+{
+  "version": {
+    "id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+    "slug": "xwxrn0gkatlv",
+    "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+    "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+    "version_number": 1,
+    "name": "Version 1",
+    "is_published": false,
+    "is_live": false,
+    "source_version_id": null,
+    "timestamp": "2025-09-23T15:06:26.810Z",
+    "published_at": null,
+    "is_deleted": false,
+    "description": "",
+    "environment": "production",
+    "created_by": "0195bab1-b602-78a6-9f8b-42aa23dd5aa2"
+  },
+  "nodes": [
+    {
+      "id": "01997ca7-2aa2-7695-98f6-a0ca7c361a0b",
+      "persistent_id": "01997ca7-2aa2-7695-98f6-a0ca7c361a0b",
+      "slug": "283domcprqti",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": null,
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "action",
+      "name": "Web call",
+      "is_complete": true,
+      "node_output_id": "019986d2-cc37-762c-82a5-f6d14ca98913",
+      "sort_index": 0,
+      "timestamp": "2025-09-24T16:55:54.501Z",
+      "is_deleted": false,
+      "configuration": {
+        "params": []
+      },
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": {
+        "id": "019986d2-cc37-762c-82a5-f6d14ca98913",
+        "run_id": null,
+        "node_id": "01997ca7-2aa2-7695-98f6-a0ca7c361a0b",
+        "node_persistent_id": "01997ca7-2aa2-7695-98f6-a0ca7c361a0b",
+        "event_id": "6e32e01e-722f-4b8b-9372-500b845686d1",
+        "session_id": null,
+        "chat_session_id": null,
+        "name": "Web call",
+        "data": {
+          "room_name": "2977058b-dbfb-4e48-b57c-82e80670a0e2_webcall_1",
+          "to_number": "web",
+          "from_number": "web"
+        },
+        "flat_data": {},
+        "is_multiple": false,
+        "error": null,
+        "llm_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cached_input_tokens": null,
+        "data_deleted": false,
+        "timestamp": "2025-09-26T16:19:45.845Z"
+      },
+      "integration_id": "0192e48a-81d8-71cb-93dc-efd8ad63d86b",
+      "event_id": "6e32e01e-722f-4b8b-9372-500b845686d1",
+      "trigger_interval": null,
+      "multi_event_behavior": "parallel",
+      "hidden_fields": [],
+      "integration": {
+        "id": "0192e48a-81d8-71cb-93dc-efd8ad63d86b",
+        "name": "AI Agent",
+        "group": "built-in",
+        "icon": "/integrations/agents.svg",
+        "description": "Create AI Agents",
+        "docs_url": "https://docs.happyrobot.ai/integrations/phone",
+        "website_url": "https://docs.happyrobot.ai/integrations/phone",
+        "is_top": true,
+        "requires_credentials": false,
+        "agent_specific": false
+      },
+      "event": {
+        "id": "6e32e01e-722f-4b8b-9372-500b845686d1",
+        "name": "Web call",
+        "integration_id": "0192e48a-81d8-71cb-93dc-efd8ad63d86b",
+        "type": 0,
+        "description": "Trigger the workflow using the Web SDK",
+        "is_instant": true,
+        "activity_name": "",
+        "task_queue": "",
+        "timeout_seconds": 10,
+        "retry_policy": {
+          "InitialInterval": 0,
+          "MaximumAttempts": 2,
+          "BackoffCoefficient": 2
+        },
+        "wait_for_signal_seconds": 0,
+        "key_for_sleep": null,
+        "coming_soon": false
+      }
+    },
+    {
+      "id": "01997cae-92ab-783d-bc5b-e2332f3816d1",
+      "persistent_id": "01997cae-92ab-783d-bc5b-e2332f3816d1",
+      "slug": "vl9g79ho001x",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "prompt",
+      "name": "Prompt",
+      "is_complete": false,
+      "node_output_id": null,
+      "sort_index": -1,
+      "timestamp": "2025-09-24T17:03:59.880Z",
+      "is_deleted": false,
+      "configuration": {},
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": null,
+      "prompt": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "You are a Carrier Sales representative who handles the conversation with a carrier who wants to buy a load from you. Be conversational with your customer."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The first thing you should do when they ask for a load, is checking their MC number. You have a MC Number Check tool for that. If the MC Number matches, then you can proceed with the call. Otherwise, tell them to call again and provide a valid MC Number. "
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Once you check the MC Number is valid, you can look for Loads in your database via the Search Load from Database tool. Get a load for your carrier and describe it. "
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "You then have to negotiate a price with them. If the price is not part of the information from the load, the standard price is 100$. They can negotiate with you, but do not do anything less than 75$. If the price is part of the information of the load, you can only do up to 10% discount. If you go back and forth 3 times, tell them that the price does not adjust and hung up the call. "
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "If you reach a succesfull negotiation, finish the call."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "In terms of your behaviour, be polite at all times."
+            }
+          ]
+        }
+      ],
+      "prompt_md": "You are a Carrier Sales representative who handles the conversation with a carrier who wants to buy a load from you. Be conversational with your customer.\n\n\n\nThe first thing you should do when they ask for a load, is checking their MC number. You have a MC Number Check tool for that. If the MC Number matches, then you can proceed with the call. Otherwise, tell them to call again and provide a valid MC Number. \n\n\n\nOnce you check the MC Number is valid, you can look for Loads in your database via the Search Load from Database tool. Get a load for your carrier and describe it. \n\n\n\nYou then have to negotiate a price with them. If the price is not part of the information from the load, the standard price is 100\\$. They can negotiate with you, but do not do anything less than 75\\$. If the price is part of the information of the load, you can only do up to 10% discount. If you go back and forth 3 times, tell them that the price does not adjust and hung up the call. \n\n\n\nIf you reach a succesfull negotiation, finish the call.\n\n\n\nIn terms of your behaviour, be polite at all times.\n",
+      "inbound_prompt": null,
+      "inbound_prompt_md": null,
+      "initial_message": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hello, I am a carrier sales representative, what can I help you with?"
+            }
+          ]
+        }
+      ],
+      "receiving_initial_message": null,
+      "model": {
+        "type": "static",
+        "static": {
+          "id": "turbo-one",
+          "name": "gpt-4.1",
+          "description": "Latency: ~600ms - Recommended for most scenarios"
+        }
+      }
+    },
+    {
+      "id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+      "persistent_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+      "slug": "2adzrczd771r",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "01997ca7-2aa2-7695-98f6-a0ca7c361a0b",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "action",
+      "name": "Inbound Voice Agent",
+      "is_complete": true,
+      "node_output_id": "01997d11-35d0-7f59-a2e1-135bce076ba0",
+      "sort_index": 0,
+      "timestamp": "2025-09-24T17:03:59.880Z",
+      "is_deleted": false,
+      "configuration": {
+        "call": {
+          "type": "static",
+          "static": {
+            "id": "01997ca7-2aa2-7695-98f6-a0ca7c361a0b",
+            "name": "Web call"
+          }
+        },
+        "agent": {
+          "name": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Carrier Sales Bot"
+                }
+              ]
+            }
+          ],
+          "languages": [
+            {
+              "type": "static",
+              "static": {
+                "id": "en",
+                "name": "English"
+              }
+            }
+          ],
+          "voices": [
+            {
+              "type": "static",
+              "static": {
+                "id": "h4d7o0mcqxh1",
+                "name": "Aireen"
+              }
+            }
+          ]
+        },
+        "play_recording_message": true,
+        "background": {
+          "type": "static",
+          "static": {
+            "id": "https://storage.googleapis.com/happyrobot-public/backgrounds/call-center.8k.wav",
+            "name": "Call center",
+            "description": "https://storage.googleapis.com/happyrobot-public/backgrounds/call-center.8k.wav"
+          }
+        },
+        "use_memory": true,
+        "memory_window": 30
+      },
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": {
+        "id": "01997d11-35d0-7f59-a2e1-135bce076ba0",
+        "run_id": null,
+        "node_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+        "node_persistent_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+        "event_id": "0192e5dc-08df-78bf-a549-f43c6bf9f087",
+        "session_id": null,
+        "chat_session_id": null,
+        "name": "Inbound Voice Agent",
+        "data": {
+          "eos": "v0",
+          "now": {
+            "ts": 1758739903,
+            "day": 24,
+            "iso": "2025-09-24T13:51:43-05:00",
+            "year": 2025,
+            "month": 9,
+            "friendly": "Wednesday, September 24, 2025 13:51:43 -0500"
+          },
+          "from": "web",
+          "agent": {
+            "name": "Carrier Sales Bot",
+            "voice": {
+              "id": "h4d7o0mcqxh1",
+              "name": "Aireen",
+              "language": "en-US"
+            },
+            "voices": [
+              {
+                "id": "h4d7o0mcqxh1",
+                "name": "Aireen",
+                "language": "en-US"
+              }
+            ],
+            "languages": [
+              "en"
+            ]
+          },
+          "number": "web",
+          "record": true,
+          "status": "in-progress",
+          "duration": 0,
+          "keyterms": "[]",
+          "numerals": true,
+          "room_name": "b3280b3a-5ef9-4680-89fa-ed467319d642_webcall_1",
+          "background": "https://storage.googleapis.com/happyrobot-public/backgrounds/call-center.8k.wav",
+          "session_id": "0f0007c4-56a8-48a5-b528-3eea7b8005a2",
+          "transcript": "[]",
+          "use_memory": true,
+          "transcriber": "legacy",
+          "memory_window": 30,
+          "multi_lingual": false,
+          "num_tool_calls": 0,
+          "num_user_turns": 0,
+          "p70_latency_ms": 0,
+          "p90_latency_ms": 0,
+          "num_total_turns": 0,
+          "max_call_duration": 600,
+          "num_assistant_turns": 0,
+          "disable_time_fillers": false,
+          "messages_per_turn_avg": 0,
+          "real_time_classifiers": null,
+          "play_recording_message": true,
+          "num_user_filler_messages": 0,
+          "stay_silent_instructions": "",
+          "user_filler_message_ratio": 0,
+          "num_assistant_cut_messages": 0,
+          "user_messages_per_turn_avg": 0,
+          "assistant_cut_message_ratio": 0,
+          "max_duration_transfer_number": "",
+          "real_time_sentiment_classifier": false,
+          "assistant_messages_per_turn_avg": 0
+        },
+        "flat_data": {
+          "eos": "v0",
+          "from": "web",
+          "now.ts": 1758739903,
+          "number": "web",
+          "record": true,
+          "status": "in-progress",
+          "now.day": 24,
+          "now.iso": "2025-09-24T13:51:43-05:00",
+          "duration": 0,
+          "keyterms": "[]",
+          "now.year": 2025,
+          "numerals": true,
+          "now.month": 9,
+          "room_name": "b3280b3a-5ef9-4680-89fa-ed467319d642_webcall_1",
+          "agent.name": "Carrier Sales Bot",
+          "background": "https://storage.googleapis.com/happyrobot-public/backgrounds/call-center.8k.wav",
+          "session_id": "0f0007c4-56a8-48a5-b528-3eea7b8005a2",
+          "transcript": "[]",
+          "use_memory": true,
+          "transcriber": "legacy",
+          "agent.voices": [
+            {
+              "id": "h4d7o0mcqxh1",
+              "name": "Aireen",
+              "language": "en-US"
+            }
+          ],
+          "now.friendly": "Wednesday, September 24, 2025 13:51:43 -0500",
+          "memory_window": 30,
+          "multi_lingual": false,
+          "agent.voice.id": "h4d7o0mcqxh1",
+          "num_tool_calls": 0,
+          "num_user_turns": 0,
+          "p70_latency_ms": 0,
+          "p90_latency_ms": 0,
+          "agent.languages": [
+            "en"
+          ],
+          "num_total_turns": 0,
+          "agent.voice.name": "Aireen",
+          "max_call_duration": 600,
+          "num_assistant_turns": 0,
+          "agent.voice.language": "en-US",
+          "disable_time_fillers": false,
+          "messages_per_turn_avg": 0,
+          "real_time_classifiers": null,
+          "play_recording_message": true,
+          "num_user_filler_messages": 0,
+          "stay_silent_instructions": "",
+          "user_filler_message_ratio": 0,
+          "num_assistant_cut_messages": 0,
+          "user_messages_per_turn_avg": 0,
+          "assistant_cut_message_ratio": 0,
+          "max_duration_transfer_number": "",
+          "real_time_sentiment_classifier": false,
+          "assistant_messages_per_turn_avg": 0
+        },
+        "is_multiple": false,
+        "error": null,
+        "llm_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cached_input_tokens": null,
+        "data_deleted": false,
+        "timestamp": "2025-09-24T18:51:43.951Z"
+      },
+      "integration_id": "0192e48a-81d8-71cb-93dc-efd8ad63d86b",
+      "event_id": "0192e5dc-08df-78bf-a549-f43c6bf9f087",
+      "trigger_interval": null,
+      "multi_event_behavior": "parallel",
+      "hidden_fields": [],
+      "integration": {
+        "id": "0192e48a-81d8-71cb-93dc-efd8ad63d86b",
+        "name": "AI Agent",
+        "group": "built-in",
+        "icon": "/integrations/agents.svg",
+        "description": "Create AI Agents",
+        "docs_url": "https://docs.happyrobot.ai/integrations/phone",
+        "website_url": "https://docs.happyrobot.ai/integrations/phone",
+        "is_top": true,
+        "requires_credentials": false,
+        "agent_specific": false
+      },
+      "event": {
+        "id": "0192e5dc-08df-78bf-a549-f43c6bf9f087",
+        "name": "Inbound Voice Agent",
+        "integration_id": "0192e48a-81d8-71cb-93dc-efd8ad63d86b",
+        "type": 1,
+        "description": "Receive inbound call",
+        "is_instant": false,
+        "activity_name": "InboundVoiceAgent",
+        "task_queue": "go-worker",
+        "timeout_seconds": 20,
+        "retry_policy": {
+          "InitialInterval": 0,
+          "MaximumAttempts": 2,
+          "BackoffCoefficient": 2
+        },
+        "wait_for_signal_seconds": 3600,
+        "key_for_sleep": null,
+        "coming_soon": false
+      }
+    },
+    {
+      "id": "71b953ee-5f19-490c-bf83-fad9a0be59fd",
+      "persistent_id": "71b953ee-5f19-490c-bf83-fad9a0be59fd",
+      "slug": "39sy0fvckurh",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "01997cae-92ab-783d-bc5b-e2332f3816d1",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "tool",
+      "name": "MC Number check",
+      "is_complete": true,
+      "node_output_id": null,
+      "sort_index": 0,
+      "timestamp": "2025-09-24T17:11:59.722Z",
+      "is_deleted": false,
+      "configuration": {},
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": null,
+      "function": {
+        "description": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Use this tool to check the MC number of the carrier who is calling you"
+              }
+            ]
+          }
+        ],
+        "message": {
+          "type": "ai",
+          "description": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Let the user know that you are going to check their MC number"
+                }
+              ]
+            }
+          ],
+          "example": "Just a second, let me check your MC number"
+        },
+        "parameters": [
+          {
+            "name": "MC_number",
+            "example": "68039456",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The MC number of the carrier who is calling you"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "01997cc7-5757-7009-9b53-3553eb88bebe",
+      "persistent_id": "01997cc7-5757-7009-9b53-3553eb88bebe",
+      "slug": "xkc8jaj8y4nw",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "71b953ee-5f19-490c-bf83-fad9a0be59fd",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "action",
+      "name": "GET",
+      "is_complete": true,
+      "node_output_id": "01998740-7bb3-7839-8907-d11bc65fd4c3",
+      "sort_index": 0,
+      "timestamp": "2025-09-24T17:31:03.304Z",
+      "is_deleted": false,
+      "configuration": {
+        "url": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "https://fmcsa-fake.fly.dev/carriers/"
+              },
+              {
+                "type": "variable",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "group_id": "71b953ee-5f19-490c-bf83-fad9a0be59fd",
+                "variable_id": "MC_number"
+              },
+              {
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "params": [
+          {
+            "key": "X-API-Key",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "dev-secret"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "headers": [
+          {
+            "key": "X-API-Key",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "dev-secret"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "authType": "none",
+        "apiKey": "dev-secret"
+      },
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": {
+        "id": "01998740-7bb3-7839-8907-d11bc65fd4c3",
+        "run_id": null,
+        "node_id": "01997cc7-5757-7009-9b53-3553eb88bebe",
+        "node_persistent_id": "01997cc7-5757-7009-9b53-3553eb88bebe",
+        "event_id": "01926f2a-b1f5-7e65-8203-86c5cd8838b6",
+        "session_id": null,
+        "chat_session_id": null,
+        "name": "GET",
+        "data": {
+          "error": "{\"detail\":\"MC not found in cache\"}"
+        },
+        "flat_data": {
+          "error": "{\"detail\":\"MC not found in cache\"}"
+        },
+        "is_multiple": false,
+        "error": null,
+        "llm_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cached_input_tokens": null,
+        "data_deleted": false,
+        "timestamp": "2025-09-26T18:19:34.196Z"
+      },
+      "integration_id": "01926a93-064a-7a00-81b2-8ab78d5907e0",
+      "event_id": "01926f2a-b1f5-7e65-8203-86c5cd8838b6",
+      "trigger_interval": null,
+      "multi_event_behavior": "parallel",
+      "hidden_fields": [],
+      "integration": {
+        "id": "01926a93-064a-7a00-81b2-8ab78d5907e0",
+        "name": "Webhook",
+        "group": "built-in",
+        "icon": "/integrations/webhook.svg",
+        "description": "Connect your agents to external systems via REST APIs",
+        "docs_url": "https://docs.happyrobot.ai/integrations/webhook",
+        "website_url": "https://docs.happyrobot.ai/integrations/webhook",
+        "is_top": true,
+        "requires_credentials": false,
+        "agent_specific": false
+      },
+      "event": {
+        "id": "01926f2a-b1f5-7e65-8203-86c5cd8838b6",
+        "name": "GET",
+        "integration_id": "01926a93-064a-7a00-81b2-8ab78d5907e0",
+        "type": 1,
+        "description": "Execute  GET request to an endpoint.",
+        "is_instant": false,
+        "activity_name": "WebhookGet",
+        "task_queue": "go-worker",
+        "timeout_seconds": 300,
+        "retry_policy": {
+          "InitialInterval": 0,
+          "MaximumAttempts": 2,
+          "BackoffCoefficient": 2
+        },
+        "wait_for_signal_seconds": 0,
+        "key_for_sleep": null,
+        "coming_soon": false
+      }
+    },
+    {
+      "id": "3da4d95d-7c97-4022-b0bd-9fcfcccb4d45",
+      "persistent_id": "3da4d95d-7c97-4022-b0bd-9fcfcccb4d45",
+      "slug": "p823bdi8t70h",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "01997cae-92ab-783d-bc5b-e2332f3816d1",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "tool",
+      "name": "Search Load from DB",
+      "is_complete": true,
+      "node_output_id": null,
+      "sort_index": 0,
+      "timestamp": "2025-09-24T17:37:07.195Z",
+      "is_deleted": false,
+      "configuration": {},
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": null,
+      "function": {
+        "description": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Use this tool when you need to search for loads in your database."
+              }
+            ]
+          }
+        ],
+        "message": {
+          "type": "ai",
+          "description": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "You should ask the carrier to hang on for a minute because you are checking which loads are available"
+                }
+              ]
+            }
+          ],
+          "example": "Okay, hang on for a minute, I will check which loads are available"
+        },
+        "parameters": []
+      }
+    },
+    {
+      "id": "01997cce-606a-74a0-a84c-c1cb496d0293",
+      "persistent_id": "01997cce-606a-74a0-a84c-c1cb496d0293",
+      "slug": "pj3f3g87a56p",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "01997cd0-f346-7224-ae0a-109d97f64836",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "action",
+      "name": "Classify Carrier Sentiment",
+      "is_complete": true,
+      "node_output_id": "01997ce3-d1bc-7b0e-be2e-6278af34c716",
+      "sort_index": 0,
+      "timestamp": "2025-09-24T17:38:44.151Z",
+      "is_deleted": false,
+      "configuration": {
+        "prompt": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 3 categories: happy, neutral, upset"
+              }
+            ]
+          }
+        ],
+        "input": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "type": "variable",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "group_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+                "variable_id": "transcript"
+              },
+              {
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "Happy",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The carrier is happy with the result of the call. "
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Neutral",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The carrier is neither happy, not sad with the result of the call."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Upset",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The carrier is upset about the result, since it was not satisfactory"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "type": "static",
+          "static": {
+            "id": "gpt-4o",
+            "name": "GPT-4o"
+          }
+        }
+      },
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": {
+        "id": "01997ce3-d1bc-7b0e-be2e-6278af34c716",
+        "run_id": null,
+        "node_id": "01997cce-606a-74a0-a84c-c1cb496d0293",
+        "node_persistent_id": "01997cce-606a-74a0-a84c-c1cb496d0293",
+        "event_id": "01926f30-36e3-7f14-9c3a-8d9a1003e532",
+        "session_id": null,
+        "chat_session_id": null,
+        "name": "Classify Carrier Sentiment",
+        "data": {
+          "input": "[]",
+          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 3 categories: happy, neutral, upset\n\nThese are the available tags and their descriptions:\n- Happy: The carrier is happy with the result of the call. \n- Neutral: The carrier is neither happy, not sad with the result of the call.\n- Upset: The carrier is upset about the result, since it was not satisfactory\n",
+          "response": {
+            "reasoning": "The user input is empty, so no sentiment can be determined.",
+            "classification": "Neutral"
+          },
+          "_llm_usage": {
+            "model": "gpt-4o",
+            "input_tokens": 198,
+            "output_tokens": 22,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 0
+          }
+        },
+        "flat_data": {
+          "input": "[]",
+          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 3 categories: happy, neutral, upset\n\nThese are the available tags and their descriptions:\n- Happy: The carrier is happy with the result of the call. \n- Neutral: The carrier is neither happy, not sad with the result of the call.\n- Upset: The carrier is upset about the result, since it was not satisfactory\n",
+          "response": {
+            "reasoning": "The user input is empty, so no sentiment can be determined.",
+            "classification": "Neutral"
+          },
+          "_llm_usage": {
+            "model": "gpt-4o",
+            "input_tokens": 198,
+            "output_tokens": 22,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 0
+          },
+          "_llm_usage.model": "gpt-4o",
+          "response.reasoning": "The user input is empty, so no sentiment can be determined.",
+          "_llm_usage.input_tokens": 198,
+          "response.classification": "Neutral",
+          "_llm_usage.output_tokens": 22,
+          "_llm_usage.reasoning_tokens": 0,
+          "_llm_usage.cached_input_tokens": 0
+        },
+        "is_multiple": false,
+        "error": null,
+        "llm_model": "gpt-4o",
+        "input_tokens": 198,
+        "output_tokens": 22,
+        "cached_input_tokens": 0,
+        "data_deleted": false,
+        "timestamp": "2025-09-24T18:02:09.212Z"
+      },
+      "integration_id": "01926a90-7f9e-785e-891c-51338a7aa70c",
+      "event_id": "01926f30-36e3-7f14-9c3a-8d9a1003e532",
+      "trigger_interval": null,
+      "multi_event_behavior": "parallel",
+      "hidden_fields": [],
+      "integration": {
+        "id": "01926a90-7f9e-785e-891c-51338a7aa70c",
+        "name": "AI",
+        "group": "built-in",
+        "icon": "/integrations/ai.svg",
+        "description": "Use AI to extract data, analyze information or generate content",
+        "docs_url": "https://docs.happyrobot.ai/integrations/ai",
+        "website_url": "https://docs.happyrobot.ai/integrations/ai",
+        "is_top": true,
+        "requires_credentials": false,
+        "agent_specific": false
+      },
+      "event": {
+        "id": "01926f30-36e3-7f14-9c3a-8d9a1003e532",
+        "name": "Classify",
+        "integration_id": "01926a90-7f9e-785e-891c-51338a7aa70c",
+        "type": 1,
+        "description": "Classify into different tags.",
+        "is_instant": false,
+        "activity_name": "classify",
+        "task_queue": "prod-worker",
+        "timeout_seconds": 300,
+        "retry_policy": {
+          "InitialInterval": 15,
+          "MaximumAttempts": 3,
+          "BackoffCoefficient": 2
+        },
+        "wait_for_signal_seconds": 0,
+        "key_for_sleep": null,
+        "coming_soon": false
+      }
+    },
+    {
+      "id": "01997cd0-65ce-78cc-a47a-bb5e58be3ca7",
+      "persistent_id": "01997cd0-65ce-78cc-a47a-bb5e58be3ca7",
+      "slug": "udey153qrg4m",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "01997cce-606a-74a0-a84c-c1cb496d0293",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "action",
+      "name": "Classify Outcome",
+      "is_complete": true,
+      "node_output_id": "01997ce3-6157-7294-8791-a7e65766bb89",
+      "sort_index": 0,
+      "timestamp": "2025-09-24T17:40:56.631Z",
+      "is_deleted": false,
+      "configuration": {
+        "prompt": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 2 categories: successful, unsuccesful"
+              }
+            ]
+          }
+        ],
+        "input": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "type": "variable",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "group_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+                "variable_id": "transcript"
+              },
+              {
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "Successful",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The sale to the carrier was successful"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Unsuccessful",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The sale to the carrier was unsuccessful"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "model": {
+          "type": "static",
+          "static": {
+            "id": "gpt-4o",
+            "name": "GPT-4o"
+          }
+        }
+      },
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": {
+        "id": "01997ce3-6157-7294-8791-a7e65766bb89",
+        "run_id": null,
+        "node_id": "01997cd0-65ce-78cc-a47a-bb5e58be3ca7",
+        "node_persistent_id": "01997cd0-65ce-78cc-a47a-bb5e58be3ca7",
+        "event_id": "01926f30-36e3-7f14-9c3a-8d9a1003e532",
+        "session_id": null,
+        "chat_session_id": null,
+        "name": "Classify Outcome",
+        "data": {
+          "input": "[]",
+          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 2 categories: successful, unsuccesful\n\nThese are the available tags and their descriptions:\n- Successful: The sale to the carrier was successful\n- Unsuccessful: The sale to the carrier was unsuccessful\n",
+          "response": {
+            "reasoning": "No transcript provided to analyze the sentiment of the carrier.",
+            "classification": "Unsuccessful"
+          },
+          "_llm_usage": {
+            "model": "gpt-4o",
+            "input_tokens": 167,
+            "output_tokens": 21,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 0
+          }
+        },
+        "flat_data": {
+          "input": "[]",
+          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 2 categories: successful, unsuccesful\n\nThese are the available tags and their descriptions:\n- Successful: The sale to the carrier was successful\n- Unsuccessful: The sale to the carrier was unsuccessful\n",
+          "response": {
+            "reasoning": "No transcript provided to analyze the sentiment of the carrier.",
+            "classification": "Unsuccessful"
+          },
+          "_llm_usage": {
+            "model": "gpt-4o",
+            "input_tokens": 167,
+            "output_tokens": 21,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 0
+          },
+          "_llm_usage.model": "gpt-4o",
+          "response.reasoning": "No transcript provided to analyze the sentiment of the carrier.",
+          "_llm_usage.input_tokens": 167,
+          "response.classification": "Unsuccessful",
+          "_llm_usage.output_tokens": 21,
+          "_llm_usage.reasoning_tokens": 0,
+          "_llm_usage.cached_input_tokens": 0
+        },
+        "is_multiple": false,
+        "error": null,
+        "llm_model": "gpt-4o",
+        "input_tokens": 167,
+        "output_tokens": 21,
+        "cached_input_tokens": 0,
+        "data_deleted": false,
+        "timestamp": "2025-09-24T18:01:40.439Z"
+      },
+      "integration_id": "01926a90-7f9e-785e-891c-51338a7aa70c",
+      "event_id": "01926f30-36e3-7f14-9c3a-8d9a1003e532",
+      "trigger_interval": null,
+      "multi_event_behavior": "parallel",
+      "hidden_fields": [],
+      "integration": {
+        "id": "01926a90-7f9e-785e-891c-51338a7aa70c",
+        "name": "AI",
+        "group": "built-in",
+        "icon": "/integrations/ai.svg",
+        "description": "Use AI to extract data, analyze information or generate content",
+        "docs_url": "https://docs.happyrobot.ai/integrations/ai",
+        "website_url": "https://docs.happyrobot.ai/integrations/ai",
+        "is_top": true,
+        "requires_credentials": false,
+        "agent_specific": false
+      },
+      "event": {
+        "id": "01926f30-36e3-7f14-9c3a-8d9a1003e532",
+        "name": "Classify",
+        "integration_id": "01926a90-7f9e-785e-891c-51338a7aa70c",
+        "type": 1,
+        "description": "Classify into different tags.",
+        "is_instant": false,
+        "activity_name": "classify",
+        "task_queue": "prod-worker",
+        "timeout_seconds": 300,
+        "retry_policy": {
+          "InitialInterval": 15,
+          "MaximumAttempts": 3,
+          "BackoffCoefficient": 2
+        },
+        "wait_for_signal_seconds": 0,
+        "key_for_sleep": null,
+        "coming_soon": false
+      }
+    },
+    {
+      "id": "01997cd0-f346-7224-ae0a-109d97f64836",
+      "persistent_id": "01997cd0-f346-7224-ae0a-109d97f64836",
+      "slug": "fjs3hohiq6iw",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "action",
+      "name": "Generate Summary",
+      "is_complete": true,
+      "node_output_id": "01997ce4-fb94-7a1c-9c25-3cb6e68ed52a",
+      "sort_index": 0,
+      "timestamp": "2025-09-24T17:41:32.849Z",
+      "is_deleted": false,
+      "configuration": {
+        "prompt": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "This is the transcript of a call between a Carrier and a sales representative. Make a summary of it in one or two paragraphs."
+              },
+              {
+                "type": "variable",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "group_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+                "variable_id": "transcript"
+              },
+              {
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "model": {
+          "type": "static",
+          "static": {
+            "id": "gpt-4o",
+            "name": "GPT-4o"
+          }
+        }
+      },
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": {
+        "id": "01997ce4-fb94-7a1c-9c25-3cb6e68ed52a",
+        "run_id": null,
+        "node_id": "01997cd0-f346-7224-ae0a-109d97f64836",
+        "node_persistent_id": "01997cd0-f346-7224-ae0a-109d97f64836",
+        "event_id": "01926f31-1c45-7b87-a458-c9527cb7e542",
+        "session_id": null,
+        "chat_session_id": null,
+        "name": "Generate Summary",
+        "data": {
+          "prompt": "This is the transcript of a call between a Carrier and a sales representative. Make a summary of it in one or two paragraphs.[]",
+          "response": "Carrier: Hi, I’m calling to get some information about your logistics services. We’re looking to expand our shipping operations and need a reliable partner.\n\nSales Representative: Sure, I’d be happy to help. Can you tell me a bit more about your current operations and what specific services you’re looking for?\n\nCarrier: Currently, we handle regional deliveries, but we’re planning to extend our reach nationwide. We need a partner who can offer warehousing, freight forwarding, and last-mile delivery services.\n\nSales Representative: We offer a comprehensive range of logistics services, including warehousing, freight forwarding, and last-mile delivery. Our nationwide network ensures timely and efficient delivery. We also provide real-time tracking and customized solutions to meet your specific needs.\n\nCarrier: That sounds promising. Can you provide some details on your pricing and contract terms?\n\nSales Representative: Absolutely. Our pricing is competitive and based on the volume and frequency of shipments. We offer flexible contract terms to accommodate your business needs. I can send you a detailed proposal outlining our services and pricing.\n\nCarrier: Great, please do. We’re looking to make a decision soon, so the sooner we get the information, the better.\n\nSales Representative: I’ll send the proposal over by the end of the day. If you have any further questions, feel free to reach out.\n\nCarrier: Thank you. I look forward to reviewing the proposal.\n\nSales Representative: You’re welcome. Have a great day!\n\nCarrier: You too. Goodbye.\n\nSales Representative: Goodbye.\n\nSummary:\nA carrier contacted a sales representative to inquire about logistics services for expanding their shipping operations nationwide. The carrier is looking for a reliable partner that can provide warehousing, freight forwarding, and last-mile delivery services. The sales representative explained that their company offers a comprehensive range of logistics services with a nationwide network, real-time tracking, and customized solutions. They discussed pricing and contract terms, and the sales representative promised to send a detailed proposal by the end of the day. The carrier expressed interest and urgency in reviewing the proposal to make a timely decision.",
+          "_llm_usage": {
+            "model": "gpt-4o",
+            "input_tokens": 34,
+            "output_tokens": 413,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 0
+          }
+        },
+        "flat_data": {
+          "prompt": "This is the transcript of a call between a Carrier and a sales representative. Make a summary of it in one or two paragraphs.[]",
+          "response": "Carrier: Hi, I’m calling to get some information about your logistics services. We’re looking to expand our shipping operations and need a reliable partner.\n\nSales Representative: Sure, I’d be happy to help. Can you tell me a bit more about your current operations and what specific services you’re looking for?\n\nCarrier: Currently, we handle regional deliveries, but we’re planning to extend our reach nationwide. We need a partner who can offer warehousing, freight forwarding, and last-mile delivery services.\n\nSales Representative: We offer a comprehensive range of logistics services, including warehousing, freight forwarding, and last-mile delivery. Our nationwide network ensures timely and efficient delivery. We also provide real-time tracking and customized solutions to meet your specific needs.\n\nCarrier: That sounds promising. Can you provide some details on your pricing and contract terms?\n\nSales Representative: Absolutely. Our pricing is competitive and based on the volume and frequency of shipments. We offer flexible contract terms to accommodate your business needs. I can send you a detailed proposal outlining our services and pricing.\n\nCarrier: Great, please do. We’re looking to make a decision soon, so the sooner we get the information, the better.\n\nSales Representative: I’ll send the proposal over by the end of the day. If you have any further questions, feel free to reach out.\n\nCarrier: Thank you. I look forward to reviewing the proposal.\n\nSales Representative: You’re welcome. Have a great day!\n\nCarrier: You too. Goodbye.\n\nSales Representative: Goodbye.\n\nSummary:\nA carrier contacted a sales representative to inquire about logistics services for expanding their shipping operations nationwide. The carrier is looking for a reliable partner that can provide warehousing, freight forwarding, and last-mile delivery services. The sales representative explained that their company offers a comprehensive range of logistics services with a nationwide network, real-time tracking, and customized solutions. They discussed pricing and contract terms, and the sales representative promised to send a detailed proposal by the end of the day. The carrier expressed interest and urgency in reviewing the proposal to make a timely decision.",
+          "_llm_usage": {
+            "model": "gpt-4o",
+            "input_tokens": 34,
+            "output_tokens": 413,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 0
+          },
+          "_llm_usage.model": "gpt-4o",
+          "_llm_usage.input_tokens": 34,
+          "_llm_usage.output_tokens": 413,
+          "_llm_usage.reasoning_tokens": 0,
+          "_llm_usage.cached_input_tokens": 0
+        },
+        "is_multiple": false,
+        "error": null,
+        "llm_model": "gpt-4o",
+        "input_tokens": 34,
+        "output_tokens": 413,
+        "cached_input_tokens": 0,
+        "data_deleted": false,
+        "timestamp": "2025-09-24T18:03:25.460Z"
+      },
+      "integration_id": "01926a90-7f9e-785e-891c-51338a7aa70c",
+      "event_id": "01926f31-1c45-7b87-a458-c9527cb7e542",
+      "trigger_interval": null,
+      "multi_event_behavior": "parallel",
+      "hidden_fields": [],
+      "integration": {
+        "id": "01926a90-7f9e-785e-891c-51338a7aa70c",
+        "name": "AI",
+        "group": "built-in",
+        "icon": "/integrations/ai.svg",
+        "description": "Use AI to extract data, analyze information or generate content",
+        "docs_url": "https://docs.happyrobot.ai/integrations/ai",
+        "website_url": "https://docs.happyrobot.ai/integrations/ai",
+        "is_top": true,
+        "requires_credentials": false,
+        "agent_specific": false
+      },
+      "event": {
+        "id": "01926f31-1c45-7b87-a458-c9527cb7e542",
+        "name": "Generate",
+        "integration_id": "01926a90-7f9e-785e-891c-51338a7aa70c",
+        "type": 1,
+        "description": "Have the AI generate a response to a query request.",
+        "is_instant": false,
+        "activity_name": "generate",
+        "task_queue": "prod-worker",
+        "timeout_seconds": 240,
+        "retry_policy": {
+          "InitialInterval": 15,
+          "MaximumAttempts": 3,
+          "BackoffCoefficient": 2
+        },
+        "wait_for_signal_seconds": 0,
+        "key_for_sleep": null,
+        "coming_soon": false
+      }
+    },
+    {
+      "id": "01997cff-bf35-7c44-ab6b-0455cd0a5afe",
+      "persistent_id": "01997cff-bf35-7c44-ab6b-0455cd0a5afe",
+      "slug": "nv367u4zqmxh",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "3da4d95d-7c97-4022-b0bd-9fcfcccb4d45",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "action",
+      "name": "GET",
+      "is_complete": true,
+      "node_output_id": "01998744-1d30-77e4-b486-a43e97881499",
+      "sort_index": 0,
+      "timestamp": "2025-09-24T18:32:39.655Z",
+      "is_deleted": false,
+      "configuration": {
+        "url": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "https://carrier-loads.fly.dev/loads/search"
+              }
+            ]
+          }
+        ],
+        "params": [
+          {
+            "key": "X-API-Key",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "dev-secret"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "headers": [
+          {
+            "key": "X-API-Key",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "dev-secret"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": {
+        "id": "01998744-1d30-77e4-b486-a43e97881499",
+        "run_id": null,
+        "node_id": "01997cff-bf35-7c44-ab6b-0455cd0a5afe",
+        "node_persistent_id": "01997cff-bf35-7c44-ab6b-0455cd0a5afe",
+        "event_id": "01926f2a-b1f5-7e65-8203-86c5cd8838b6",
+        "session_id": null,
+        "chat_session_id": null,
+        "name": "GET",
+        "data": {
+          "page": 1,
+          "count": 5,
+          "results": [
+            {
+              "miles": 215,
+              "notes": "Priority delivery",
+              "origin": "New York NY",
+              "weight": 5000,
+              "load_id": "L004",
+              "dimensions": "48x40x45",
+              "destination": "Boston MA",
+              "num_of_pieces": 300,
+              "commodity_type": "Clothing",
+              "equipment_type": "Van",
+              "loadboard_rate": 800,
+              "pickup_datetime": "2025-09-27T06:00:00",
+              "delivery_datetime": "2025-09-27T15:00:00"
+            },
+            {
+              "miles": 370,
+              "notes": "Open deck load",
+              "origin": "Los Angeles CA",
+              "weight": 15000,
+              "load_id": "L002",
+              "dimensions": "60x48x72",
+              "destination": "Phoenix AZ",
+              "num_of_pieces": 100,
+              "commodity_type": "Steel",
+              "equipment_type": "Flatbed",
+              "loadboard_rate": 1200,
+              "pickup_datetime": "2025-09-27T07:00:00",
+              "delivery_datetime": "2025-09-27T20:00:00"
+            },
+            {
+              "miles": 925,
+              "notes": "Fragile goods",
+              "origin": "Chicago IL",
+              "weight": 20000,
+              "load_id": "L001",
+              "dimensions": "48x40x60",
+              "destination": "Dallas TX",
+              "num_of_pieces": 500,
+              "commodity_type": "Electronics",
+              "equipment_type": "Van",
+              "loadboard_rate": 2500,
+              "pickup_datetime": "2025-09-28T08:00:00",
+              "delivery_datetime": "2025-09-29T18:00:00"
+            },
+            {
+              "miles": 660,
+              "notes": "Keep refrigerated",
+              "origin": "Atlanta GA",
+              "weight": 10000,
+              "load_id": "L003",
+              "dimensions": "40x40x65",
+              "destination": "Miami FL",
+              "num_of_pieces": 200,
+              "commodity_type": "Produce",
+              "equipment_type": "Reefer",
+              "loadboard_rate": 1800,
+              "pickup_datetime": "2025-09-30T09:00:00",
+              "delivery_datetime": "2025-10-01T17:00:00"
+            },
+            {
+              "miles": 1080,
+              "notes": "Time sensitive",
+              "origin": "Houston TX",
+              "weight": 18000,
+              "load_id": "L005",
+              "dimensions": "52x48x70",
+              "destination": "Chicago IL",
+              "num_of_pieces": 400,
+              "commodity_type": "Furniture",
+              "equipment_type": "Van",
+              "loadboard_rate": 2700,
+              "pickup_datetime": "2025-10-02T08:00:00",
+              "delivery_datetime": "2025-10-03T21:00:00"
+            }
+          ],
+          "page_size": 50
+        },
+        "flat_data": {
+          "page": 1,
+          "count": 5,
+          "results": "[{\"commodity_type\":\"Clothing\",\"delivery_datetime\":\"2025-09-27T15:00:00\",\"destination\":\"Boston MA\",\"dimensions\":\"48x40x45\",\"equipment_type\":\"Van\",\"load_id\":\"L004\",\"loadboard_rate\":800,\"miles\":215,\"notes\":\"Priority delivery\",\"num_of_pieces\":300,\"origin\":\"New York NY\",\"pickup_datetime\":\"2025-09-27T06:00:00\",\"weight\":5000},{\"commodity_type\":\"Steel\",\"delivery_datetime\":\"2025-09-27T20:00:00\",\"destination\":\"Phoenix AZ\",\"dimensions\":\"60x48x72\",\"equipment_type\":\"Flatbed\",\"load_id\":\"L002\",\"loadboard_rate\":1200,\"miles\":370,\"notes\":\"Open deck load\",\"num_of_pieces\":100,\"origin\":\"Los Angeles CA\",\"pickup_datetime\":\"2025-09-27T07:00:00\",\"weight\":15000},{\"commodity_type\":\"Electronics\",\"delivery_datetime\":\"2025-09-29T18:00:00\",\"destination\":\"Dallas TX\",\"dimensions\":\"48x40x60\",\"equipment_type\":\"Van\",\"load_id\":\"L001\",\"loadboard_rate\":2500,\"miles\":925,\"notes\":\"Fragile goods\",\"num_of_pieces\":500,\"origin\":\"Chicago IL\",\"pickup_datetime\":\"2025-09-28T08:00:00\",\"weight\":20000},{\"commodity_type\":\"Produce\",\"delivery_datetime\":\"2025-10-01T17:00:00\",\"destination\":\"Miami FL\",\"dimensions\":\"40x40x65\",\"equipment_type\":\"Reefer\",\"load_id\":\"L003\",\"loadboard_rate\":1800,\"miles\":660,\"notes\":\"Keep refrigerated\",\"num_of_pieces\":200,\"origin\":\"Atlanta GA\",\"pickup_datetime\":\"2025-09-30T09:00:00\",\"weight\":10000},{\"commodity_type\":\"Furniture\",\"delivery_datetime\":\"2025-10-03T21:00:00\",\"destination\":\"Chicago IL\",\"dimensions\":\"52x48x70\",\"equipment_type\":\"Van\",\"load_id\":\"L005\",\"loadboard_rate\":2700,\"miles\":1080,\"notes\":\"Time sensitive\",\"num_of_pieces\":400,\"origin\":\"Houston TX\",\"pickup_datetime\":\"2025-10-02T08:00:00\",\"weight\":18000}]",
+          "page_size": 50,
+          "results.0.miles": 215,
+          "results.0.notes": "Priority delivery",
+          "results.1.miles": 370,
+          "results.1.notes": "Open deck load",
+          "results.2.miles": 925,
+          "results.2.notes": "Fragile goods",
+          "results.3.miles": 660,
+          "results.3.notes": "Keep refrigerated",
+          "results.4.miles": 1080,
+          "results.4.notes": "Time sensitive",
+          "results.0.origin": "New York NY",
+          "results.0.weight": 5000,
+          "results.1.origin": "Los Angeles CA",
+          "results.1.weight": 15000,
+          "results.2.origin": "Chicago IL",
+          "results.2.weight": 20000,
+          "results.3.origin": "Atlanta GA",
+          "results.3.weight": 10000,
+          "results.4.origin": "Houston TX",
+          "results.4.weight": 18000,
+          "results.0.load_id": "L004",
+          "results.1.load_id": "L002",
+          "results.2.load_id": "L001",
+          "results.3.load_id": "L003",
+          "results.4.load_id": "L005",
+          "results.0.dimensions": "48x40x45",
+          "results.1.dimensions": "60x48x72",
+          "results.2.dimensions": "48x40x60",
+          "results.3.dimensions": "40x40x65",
+          "results.4.dimensions": "52x48x70",
+          "results.0.destination": "Boston MA",
+          "results.1.destination": "Phoenix AZ",
+          "results.2.destination": "Dallas TX",
+          "results.3.destination": "Miami FL",
+          "results.4.destination": "Chicago IL",
+          "results.0.num_of_pieces": 300,
+          "results.1.num_of_pieces": 100,
+          "results.2.num_of_pieces": 500,
+          "results.3.num_of_pieces": 200,
+          "results.4.num_of_pieces": 400,
+          "results.0.commodity_type": "Clothing",
+          "results.0.equipment_type": "Van",
+          "results.0.loadboard_rate": 800,
+          "results.1.commodity_type": "Steel",
+          "results.1.equipment_type": "Flatbed",
+          "results.1.loadboard_rate": 1200,
+          "results.2.commodity_type": "Electronics",
+          "results.2.equipment_type": "Van",
+          "results.2.loadboard_rate": 2500,
+          "results.3.commodity_type": "Produce",
+          "results.3.equipment_type": "Reefer",
+          "results.3.loadboard_rate": 1800,
+          "results.4.commodity_type": "Furniture",
+          "results.4.equipment_type": "Van",
+          "results.4.loadboard_rate": 2700,
+          "results.0.pickup_datetime": "2025-09-27T06:00:00",
+          "results.1.pickup_datetime": "2025-09-27T07:00:00",
+          "results.2.pickup_datetime": "2025-09-28T08:00:00",
+          "results.3.pickup_datetime": "2025-09-30T09:00:00",
+          "results.4.pickup_datetime": "2025-10-02T08:00:00",
+          "results.0.delivery_datetime": "2025-09-27T15:00:00",
+          "results.1.delivery_datetime": "2025-09-27T20:00:00",
+          "results.2.delivery_datetime": "2025-09-29T18:00:00",
+          "results.3.delivery_datetime": "2025-10-01T17:00:00",
+          "results.4.delivery_datetime": "2025-10-03T21:00:00"
+        },
+        "is_multiple": false,
+        "error": null,
+        "llm_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cached_input_tokens": null,
+        "data_deleted": false,
+        "timestamp": "2025-09-26T18:23:32.144Z"
+      },
+      "integration_id": "01926a93-064a-7a00-81b2-8ab78d5907e0",
+      "event_id": "01926f2a-b1f5-7e65-8203-86c5cd8838b6",
+      "trigger_interval": null,
+      "multi_event_behavior": "parallel",
+      "hidden_fields": [],
+      "integration": {
+        "id": "01926a93-064a-7a00-81b2-8ab78d5907e0",
+        "name": "Webhook",
+        "group": "built-in",
+        "icon": "/integrations/webhook.svg",
+        "description": "Connect your agents to external systems via REST APIs",
+        "docs_url": "https://docs.happyrobot.ai/integrations/webhook",
+        "website_url": "https://docs.happyrobot.ai/integrations/webhook",
+        "is_top": true,
+        "requires_credentials": false,
+        "agent_specific": false
+      },
+      "event": {
+        "id": "01926f2a-b1f5-7e65-8203-86c5cd8838b6",
+        "name": "GET",
+        "integration_id": "01926a93-064a-7a00-81b2-8ab78d5907e0",
+        "type": 1,
+        "description": "Execute  GET request to an endpoint.",
+        "is_instant": false,
+        "activity_name": "WebhookGet",
+        "task_queue": "go-worker",
+        "timeout_seconds": 300,
+        "retry_policy": {
+          "InitialInterval": 0,
+          "MaximumAttempts": 2,
+          "BackoffCoefficient": 2
+        },
+        "wait_for_signal_seconds": 0,
+        "key_for_sleep": null,
+        "coming_soon": false
+      }
+    }
+  ]
+}
