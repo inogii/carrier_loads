@@ -14,17 +14,7 @@ This use case has a hybrid deployment, including both an agent in the HappyRobot
 
 ### 🚀 Step 1: Cloud API endpoint deployment
 
-For this use case, the cloud vendor choice has been [fly.io](https://fly.io), since it has pretty affordable cloud deployments. For this reason, ensure you have flyctl installed in your environment. You can find more details on flyctl installation [here](https://fly.io/docs/flyctl/). The cloud endpoints can be easily deployed by running the following commands.
-
-#### FMCSA Fake Deployment
-```
-cd fmcsa_fake
-```
-```
-flyctl launch
-```
-
-You can customize the type of cloud instance, but the minimal one will suffice for this endpoint.
+For this use case, the cloud vendor choice has been [fly.io](https://fly.io), since it has pretty affordable cloud deployments. For this reason, ensure you have flyctl installed in your environment. You can find more details on flyctl installation [here](https://fly.io/docs/flyctl/). The cloud endpoint can be easily deployed by running the following commands.
 
 #### Carrier Loads Deployment
 
@@ -41,12 +31,13 @@ You can customize the type of cloud instance, but the minimal one will suffice f
 
 ### 🤖 Step 2: HappyRobot Agent Deployment
 
-Once you have your two APIs deployed in the cloud, it is time for us to deploy the agent in the HappyRobot Platform. 
+Once you have your API deployed in the cloud, it is time for us to deploy the agent in the HappyRobot Platform. 
 
 Log into the HappyRobot Platform and follow the steps to deploy the agent:
 - 1. Go to the workflows tab and create a new workflow
 - 2. Click on upload file and upload the agent/carrier-sales-version-1.json file
-- 3. Once you succesfully import the file, publish it to production
+- 3. Go to the FMCSA API Tool and change the default webkey value for the actual FMCSA webkey.
+- 4. Once you succesfully import the file and make that change, publish it to production
 
 That's it! You can now test your Carrier Sales representative agent by clicking on the play button in the upper right corner. Enjoy the negotiation!
 
