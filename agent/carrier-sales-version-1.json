@@ -172,7 +172,7 @@
           "type": "p",
           "children": [
             {
-              "text": "You then have to negotiate a price with them. If the price is not part of the information from the load, the standard price is 100$. They can negotiate with you, but do not do anything less than 75$. If the price is part of the information of the load, you can only do up to 10% discount. If you go back and forth 3 times, tell them that the price does not adjust and hung up the call. "
+              "text": "You then have to negotiate a price with them. If the price is not part of the information from the load, the standard price is 100$. They can negotiate with you, but do not do anything less than 75$. If the price is part of the information of the load, you can only do up to 10% discount. If you go back and forth 3 times, tell them that the price does not adjust and finish the call. Do not offer the 10% discount by default, only if the carrier thinks the price is to high or starts asking for a negotiation."
             }
           ]
         },
@@ -209,7 +209,7 @@
           ]
         }
       ],
-      "prompt_md": "You are a Carrier Sales representative who handles the conversation with a carrier who wants to buy a load from you. Be conversational with your customer.\n\n\n\nThe first thing you should do when they ask for a load, is checking their MC number. You have a MC Number Check tool for that. If the MC Number matches, then you can proceed with the call. Otherwise, tell them to call again and provide a valid MC Number. \n\n\n\nOnce you check the MC Number is valid, you can look for Loads in your database via the Search Load from Database tool. Get a load for your carrier and describe it. \n\n\n\nYou then have to negotiate a price with them. If the price is not part of the information from the load, the standard price is 100\\$. They can negotiate with you, but do not do anything less than 75\\$. If the price is part of the information of the load, you can only do up to 10% discount. If you go back and forth 3 times, tell them that the price does not adjust and hung up the call. \n\n\n\nIf you reach a succesfull negotiation, finish the call.\n\n\n\nIn terms of your behaviour, be polite at all times.\n",
+      "prompt_md": "You are a Carrier Sales representative who handles the conversation with a carrier who wants to buy a load from you. Be conversational with your customer.\n\n\n\nThe first thing you should do when they ask for a load, is checking their MC number. You have a MC Number Check tool for that. If the MC Number matches, then you can proceed with the call. Otherwise, tell them to call again and provide a valid MC Number. \n\n\n\nOnce you check the MC Number is valid, you can look for Loads in your database via the Search Load from Database tool. Get a load for your carrier and describe it. \n\n\n\nYou then have to negotiate a price with them. If the price is not part of the information from the load, the standard price is 100\\$. They can negotiate with you, but do not do anything less than 75\\$. If the price is part of the information of the load, you can only do up to 10% discount. If you go back and forth 3 times, tell them that the price does not adjust and finish the call. Do not offer the 10% discount by default, only if the carrier thinks the price is to high or starts asking for a negotiation.\n\n\n\nIf you reach a succesfull negotiation, finish the call.\n\n\n\nIn terms of your behaviour, be polite at all times.\n",
       "inbound_prompt": null,
       "inbound_prompt_md": null,
       "initial_message": [
@@ -587,7 +587,7 @@
                 "type": "paragraph",
                 "children": [
                   {
-                    "text": "<webKey>"
+                    "text": "cdc33e44d693a3a58451898d4ec9df862c65b954"
                   }
                 ]
               }
@@ -596,7 +596,7 @@
         ],
         "headers": [],
         "authType": "none",
-        "apiKey": "dev-secret"
+        "apiKey": "anapikey"
       },
       "staging_configuration": {},
       "retry_configuration": {},
@@ -723,7 +723,7 @@
       "type": "action",
       "name": "Classify Carrier Sentiment",
       "is_complete": true,
-      "node_output_id": "0199876b-0f5b-706a-8f6f-1914146f9f77",
+      "node_output_id": "0199cd64-8787-7e48-b114-2eca267bc50a",
       "sort_index": 0,
       "timestamp": "2025-09-24T17:38:44.151Z",
       "is_deleted": false,
@@ -763,7 +763,7 @@
         ],
         "tags": [
           {
-            "name": "Happy",
+            "name": "happy",
             "description": [
               {
                 "type": "paragraph",
@@ -776,7 +776,7 @@
             ]
           },
           {
-            "name": "Neutral",
+            "name": "neutral",
             "description": [
               {
                 "type": "paragraph",
@@ -789,13 +789,26 @@
             ]
           },
           {
-            "name": "Upset",
+            "name": "upset",
             "description": [
               {
                 "type": "paragraph",
                 "children": [
                   {
                     "text": "The carrier is upset about the result, since it was not satisfactory"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "n/a",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The call does not apply into this classification. You may use this for instance if the conversation is too short, is a missed call or things like this."
                   }
                 ]
               }
@@ -814,7 +827,7 @@
       "retry_configuration": {},
       "outbound_retry_configuration": {},
       "node_output": {
-        "id": "0199876b-0f5b-706a-8f6f-1914146f9f77",
+        "id": "0199cd64-8787-7e48-b114-2eca267bc50a",
         "run_id": null,
         "node_id": "01997cce-606a-74a0-a84c-c1cb496d0293",
         "node_persistent_id": "01997cce-606a-74a0-a84c-c1cb496d0293",
@@ -824,49 +837,49 @@
         "name": "Classify Carrier Sentiment",
         "data": {
           "input": "[]",
-          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 3 categories: happy, neutral, upset\n\nThese are the available tags and their descriptions:\n- Happy: The carrier is happy with the result of the call. \n- Neutral: The carrier is neither happy, not sad with the result of the call.\n- Upset: The carrier is upset about the result, since it was not satisfactory\n",
+          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 3 categories: happy, neutral, upset\n\nThese are the available tags and their descriptions:\n- happy: The carrier is happy with the result of the call. \n- neutral: The carrier is neither happy, not sad with the result of the call.\n- upset: The carrier is upset about the result, since it was not satisfactory\n- n/a: The call does not apply into this classification. You may use this for instance if the conversation is too short, is a missed call or things like this.\n",
           "response": {
-            "reasoning": "The user input is empty, so no sentiment can be determined.",
-            "classification": "Neutral"
+            "reasoning": "The conversation is too short to determine the sentiment.",
+            "classification": "n/a"
           },
           "_llm_usage": {
             "model": "gpt-4o",
-            "input_tokens": 198,
-            "output_tokens": 22,
+            "input_tokens": 237,
+            "output_tokens": 20,
             "reasoning_tokens": 0,
             "cached_input_tokens": 0
           }
         },
         "flat_data": {
           "input": "[]",
-          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 3 categories: happy, neutral, upset\n\nThese are the available tags and their descriptions:\n- Happy: The carrier is happy with the result of the call. \n- Neutral: The carrier is neither happy, not sad with the result of the call.\n- Upset: The carrier is upset about the result, since it was not satisfactory\n",
+          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 3 categories: happy, neutral, upset\n\nThese are the available tags and their descriptions:\n- happy: The carrier is happy with the result of the call. \n- neutral: The carrier is neither happy, not sad with the result of the call.\n- upset: The carrier is upset about the result, since it was not satisfactory\n- n/a: The call does not apply into this classification. You may use this for instance if the conversation is too short, is a missed call or things like this.\n",
           "response": {
-            "reasoning": "The user input is empty, so no sentiment can be determined.",
-            "classification": "Neutral"
+            "reasoning": "The conversation is too short to determine the sentiment.",
+            "classification": "n/a"
           },
           "_llm_usage": {
             "model": "gpt-4o",
-            "input_tokens": 198,
-            "output_tokens": 22,
+            "input_tokens": 237,
+            "output_tokens": 20,
             "reasoning_tokens": 0,
             "cached_input_tokens": 0
           },
           "_llm_usage.model": "gpt-4o",
-          "response.reasoning": "The user input is empty, so no sentiment can be determined.",
-          "_llm_usage.input_tokens": 198,
-          "response.classification": "Neutral",
-          "_llm_usage.output_tokens": 22,
+          "response.reasoning": "The conversation is too short to determine the sentiment.",
+          "_llm_usage.input_tokens": 237,
+          "response.classification": "n/a",
+          "_llm_usage.output_tokens": 20,
           "_llm_usage.reasoning_tokens": 0,
           "_llm_usage.cached_input_tokens": 0
         },
         "is_multiple": false,
         "error": null,
         "llm_model": "gpt-4o",
-        "input_tokens": 198,
-        "output_tokens": 22,
+        "input_tokens": 237,
+        "output_tokens": 20,
         "cached_input_tokens": 0,
         "data_deleted": false,
-        "timestamp": "2025-09-26T19:06:04.507Z"
+        "timestamp": "2025-10-10T09:12:21.639Z"
       },
       "integration_id": "01926a90-7f9e-785e-891c-51338a7aa70c",
       "event_id": "01926f30-36e3-7f14-9c3a-8d9a1003e532",
@@ -916,7 +929,7 @@
       "type": "action",
       "name": "Classify Outcome",
       "is_complete": true,
-      "node_output_id": "01997ce3-6157-7294-8791-a7e65766bb89",
+      "node_output_id": "0199cd66-d0be-7643-8303-255a3646ba4f",
       "sort_index": 0,
       "timestamp": "2025-09-24T17:40:56.631Z",
       "is_deleted": false,
@@ -956,7 +969,7 @@
         ],
         "tags": [
           {
-            "name": "Successful",
+            "name": "successful",
             "description": [
               {
                 "type": "paragraph",
@@ -969,13 +982,26 @@
             ]
           },
           {
-            "name": "Unsuccessful",
+            "name": "unsuccessful",
             "description": [
               {
                 "type": "paragraph",
                 "children": [
                   {
                     "text": "The sale to the carrier was unsuccessful"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "n/a",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The sale to the carrier was neither successful or unsuccesful. Maybe the call does not apply in this context, since it might be an empty call, a missed call or they do not even discuss any selling."
                   }
                 ]
               }
@@ -994,7 +1020,7 @@
       "retry_configuration": {},
       "outbound_retry_configuration": {},
       "node_output": {
-        "id": "01997ce3-6157-7294-8791-a7e65766bb89",
+        "id": "0199cd66-d0be-7643-8303-255a3646ba4f",
         "run_id": null,
         "node_id": "01997cd0-65ce-78cc-a47a-bb5e58be3ca7",
         "node_persistent_id": "01997cd0-65ce-78cc-a47a-bb5e58be3ca7",
@@ -1004,49 +1030,49 @@
         "name": "Classify Outcome",
         "data": {
           "input": "[]",
-          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 2 categories: successful, unsuccesful\n\nThese are the available tags and their descriptions:\n- Successful: The sale to the carrier was successful\n- Unsuccessful: The sale to the carrier was unsuccessful\n",
+          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 2 categories: successful, unsuccesful\n\nThese are the available tags and their descriptions:\n- successful: The sale to the carrier was successful\n- unsuccessful: The sale to the carrier was unsuccessful\n- n/a: The sale to the carrier was neither successful or unsuccesful. Maybe the call does not apply in this context, since it might be an empty call, a missed call or they do not even discuss any selling.\n",
           "response": {
-            "reasoning": "No transcript provided to analyze the sentiment of the carrier.",
-            "classification": "Unsuccessful"
+            "reasoning": "The call is empty and does not provide any information about the sale.",
+            "classification": "n/a"
           },
           "_llm_usage": {
             "model": "gpt-4o",
-            "input_tokens": 167,
-            "output_tokens": 21,
+            "input_tokens": 220,
+            "output_tokens": 24,
             "reasoning_tokens": 0,
             "cached_input_tokens": 0
           }
         },
         "flat_data": {
           "input": "[]",
-          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 2 categories: successful, unsuccesful\n\nThese are the available tags and their descriptions:\n- Successful: The sale to the carrier was successful\n- Unsuccessful: The sale to the carrier was unsuccessful\n",
+          "prompt": "This is the transcript of a call between a Carrier and a Sales person. Classify the call according to the sentiment of the carrier into one of 2 categories: successful, unsuccesful\n\nThese are the available tags and their descriptions:\n- successful: The sale to the carrier was successful\n- unsuccessful: The sale to the carrier was unsuccessful\n- n/a: The sale to the carrier was neither successful or unsuccesful. Maybe the call does not apply in this context, since it might be an empty call, a missed call or they do not even discuss any selling.\n",
           "response": {
-            "reasoning": "No transcript provided to analyze the sentiment of the carrier.",
-            "classification": "Unsuccessful"
+            "reasoning": "The call is empty and does not provide any information about the sale.",
+            "classification": "n/a"
           },
           "_llm_usage": {
             "model": "gpt-4o",
-            "input_tokens": 167,
-            "output_tokens": 21,
+            "input_tokens": 220,
+            "output_tokens": 24,
             "reasoning_tokens": 0,
             "cached_input_tokens": 0
           },
           "_llm_usage.model": "gpt-4o",
-          "response.reasoning": "No transcript provided to analyze the sentiment of the carrier.",
-          "_llm_usage.input_tokens": 167,
-          "response.classification": "Unsuccessful",
-          "_llm_usage.output_tokens": 21,
+          "response.reasoning": "The call is empty and does not provide any information about the sale.",
+          "_llm_usage.input_tokens": 220,
+          "response.classification": "n/a",
+          "_llm_usage.output_tokens": 24,
           "_llm_usage.reasoning_tokens": 0,
           "_llm_usage.cached_input_tokens": 0
         },
         "is_multiple": false,
         "error": null,
         "llm_model": "gpt-4o",
-        "input_tokens": 167,
-        "output_tokens": 21,
+        "input_tokens": 220,
+        "output_tokens": 24,
         "cached_input_tokens": 0,
         "data_deleted": false,
-        "timestamp": "2025-09-24T18:01:40.439Z"
+        "timestamp": "2025-10-10T09:14:51.453Z"
       },
       "integration_id": "01926a90-7f9e-785e-891c-51338a7aa70c",
       "event_id": "01926f30-36e3-7f14-9c3a-8d9a1003e532",
@@ -1251,7 +1277,7 @@
                 "type": "paragraph",
                 "children": [
                   {
-                    "text": "dev-secret"
+                    "text": "anapikey"
                   }
                 ]
               }
@@ -1266,7 +1292,7 @@
                 "type": "paragraph",
                 "children": [
                   {
-                    "text": "dev-secret"
+                    "text": "anapikey"
                   }
                 ]
               }
@@ -1496,7 +1522,7 @@
       "type": "action",
       "name": "Extract Conversation Details",
       "is_complete": true,
-      "node_output_id": "0199876a-d5e8-77d0-95e7-266f51c1c527",
+      "node_output_id": "0199cd7c-e7d1-7366-b741-ed3fe3459563",
       "sort_index": 0,
       "timestamp": "2025-09-26T19:02:36.172Z",
       "is_deleted": false,
@@ -1542,12 +1568,12 @@
                 "type": "paragraph",
                 "children": [
                   {
-                    "text": "The carrier's MC number"
+                    "text": "The carrier's MC number, it must be a string"
                   }
                 ]
               }
             ],
-            "example": "123456"
+            "example": "\"123456\""
           },
           {
             "name": "Agreed price",
@@ -1556,12 +1582,12 @@
                 "type": "paragraph",
                 "children": [
                   {
-                    "text": "The price that the carrier and the sales agree in the call"
+                    "text": "The price that the carrier and the sales agree in the call, it must be a 2 positions decimal. If there is no negotiation, the agreed price is the original price."
                   }
                 ]
               }
             ],
-            "example": "450"
+            "example": "450.00"
           },
           {
             "name": "Load Details",
@@ -1576,6 +1602,48 @@
               }
             ],
             "example": "A description of the load can go here"
+          },
+          {
+            "name": "Had Discount",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "A boolean True/False stating if a discount was agreed in this call."
+                  }
+                ]
+              }
+            ],
+            "example": "True"
+          },
+          {
+            "name": "Discount Rate",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The percentage of discount that was agreed in the end. If there was no negotiation, this number is 0."
+                  }
+                ]
+              }
+            ],
+            "example": "10"
+          },
+          {
+            "name": "Original Load Rate",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "The original price of the load. It must be a 2 position decimal"
+                  }
+                ]
+              }
+            ],
+            "example": "560.00"
           }
         ],
         "model": {
@@ -1590,7 +1658,7 @@
       "retry_configuration": {},
       "outbound_retry_configuration": {},
       "node_output": {
-        "id": "0199876a-d5e8-77d0-95e7-266f51c1c527",
+        "id": "0199cd7c-e7d1-7366-b741-ed3fe3459563",
         "run_id": null,
         "node_id": "01998767-e0bc-74b8-8aaf-95114521a07a",
         "node_persistent_id": "01998767-e0bc-74b8-8aaf-95114521a07a",
@@ -1603,13 +1671,16 @@
           "prompt": "You will get the summary of a call that just took place between a carrier sales representative and a carrier. I would like you to extract the relevant information from it, such as which carrier is booking the load (if any), which load it is booking, and what is the agreed price.",
           "response": {
             "Carrier MC": "123456",
-            "Agreed price": "450",
-            "Load Details": "A description of the load can go here"
+            "Agreed price": "450.00",
+            "Had Discount": "True",
+            "Load Details": "A description of the load can go here",
+            "Discount Rate": "10",
+            "Original Load Rate": "560.00"
           },
           "_llm_usage": {
             "model": "gpt-4o",
-            "input_tokens": 215,
-            "output_tokens": 26,
+            "input_tokens": 365,
+            "output_tokens": 46,
             "reasoning_tokens": 0,
             "cached_input_tokens": 0
           }
@@ -1619,33 +1690,39 @@
           "prompt": "You will get the summary of a call that just took place between a carrier sales representative and a carrier. I would like you to extract the relevant information from it, such as which carrier is booking the load (if any), which load it is booking, and what is the agreed price.",
           "response": {
             "Carrier MC": "123456",
-            "Agreed price": "450",
-            "Load Details": "A description of the load can go here"
+            "Agreed price": "450.00",
+            "Had Discount": "True",
+            "Load Details": "A description of the load can go here",
+            "Discount Rate": "10",
+            "Original Load Rate": "560.00"
           },
           "_llm_usage": {
             "model": "gpt-4o",
-            "input_tokens": 215,
-            "output_tokens": 26,
+            "input_tokens": 365,
+            "output_tokens": 46,
             "reasoning_tokens": 0,
             "cached_input_tokens": 0
           },
           "_llm_usage.model": "gpt-4o",
           "response.Carrier MC": "123456",
-          "response.Agreed price": "450",
+          "response.Agreed price": "450.00",
+          "response.Had Discount": "True",
           "response.Load Details": "A description of the load can go here",
-          "_llm_usage.input_tokens": 215,
-          "_llm_usage.output_tokens": 26,
+          "response.Discount Rate": "10",
+          "_llm_usage.input_tokens": 365,
+          "_llm_usage.output_tokens": 46,
           "_llm_usage.reasoning_tokens": 0,
+          "response.Original Load Rate": "560.00",
           "_llm_usage.cached_input_tokens": 0
         },
         "is_multiple": false,
         "error": null,
         "llm_model": "gpt-4o",
-        "input_tokens": 215,
-        "output_tokens": 26,
+        "input_tokens": 365,
+        "output_tokens": 46,
         "cached_input_tokens": 0,
         "data_deleted": false,
-        "timestamp": "2025-09-26T19:05:49.800Z"
+        "timestamp": "2025-10-10T09:38:59.153Z"
       },
       "integration_id": "01926a90-7f9e-785e-891c-51338a7aa70c",
       "event_id": "01926f30-36a3-7394-8f73-eeead5d7f948",
@@ -1677,6 +1754,325 @@
         "retry_policy": {
           "InitialInterval": 15,
           "MaximumAttempts": 3,
+          "BackoffCoefficient": 2
+        },
+        "wait_for_signal_seconds": 0,
+        "key_for_sleep": null,
+        "coming_soon": false
+      }
+    },
+    {
+      "id": "0199caa7-6c3f-77c1-922c-50e5cfe45cc3",
+      "persistent_id": "0199caa7-6c3f-77c1-922c-50e5cfe45cc3",
+      "slug": "vpygzbqywbou",
+      "org_id": "0199771c-8677-78c5-9964-44fbb22e948b",
+      "use_case_id": "0199771c-9874-7603-b4b4-ed69264a8110",
+      "parent_id": "01997cd0-65ce-78cc-a47a-bb5e58be3ca7",
+      "version_id": "0199771c-987a-7e3a-84bd-1c4caf36f63e",
+      "type": "action",
+      "name": "POST",
+      "is_complete": true,
+      "node_output_id": "0199cd6b-d426-7d6c-87d3-73375ac5621a",
+      "sort_index": 0,
+      "timestamp": "2025-10-09T20:26:34.195Z",
+      "is_deleted": false,
+      "configuration": {
+        "url": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "https://metrics-api-cold-grass-4301.fly.dev/calls"
+              }
+            ]
+          }
+        ],
+        "data": [
+          {
+            "key": "original_price",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "variable",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "group_id": "01998767-e0bc-74b8-8aaf-95114521a07a",
+                    "variable_id": "response.Original Load Rate"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "agreed_price",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "variable",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "group_id": "01998767-e0bc-74b8-8aaf-95114521a07a",
+                    "variable_id": "response.Agreed price"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "had_discount",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "variable",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "group_id": "01998767-e0bc-74b8-8aaf-95114521a07a",
+                    "variable_id": "response.Had Discount"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "sentiment",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "variable",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "group_id": "01997cce-606a-74a0-a84c-c1cb496d0293",
+                    "variable_id": "response.classification"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "outcome",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "variable",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "group_id": "01997cd0-65ce-78cc-a47a-bb5e58be3ca7",
+                    "variable_id": "response.classification"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "duration",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "variable",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "group_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+                    "variable_id": "duration"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "timestamp",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "variable",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "group_id": "01997cae-92aa-7d6f-98a0-30501ea24c85",
+                    "variable_id": "now.iso"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "mc_number",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "variable",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "group_id": "01998767-e0bc-74b8-8aaf-95114521a07a",
+                    "variable_id": "response.Carrier MC"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "headers": [
+          {
+            "key": "X-API-Key",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "anapikey"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "preserveDataTypes": false
+      },
+      "staging_configuration": {},
+      "retry_configuration": {},
+      "outbound_retry_configuration": {},
+      "node_output": {
+        "id": "0199cd6b-d426-7d6c-87d3-73375ac5621a",
+        "run_id": null,
+        "node_id": "0199caa7-6c3f-77c1-922c-50e5cfe45cc3",
+        "node_persistent_id": "0199caa7-6c3f-77c1-922c-50e5cfe45cc3",
+        "event_id": "01926f2b-2973-7ebf-ada1-e984251e27ec",
+        "session_id": null,
+        "chat_session_id": null,
+        "name": "POST",
+        "data": {
+          "ok": true,
+          "call_id": 301
+        },
+        "flat_data": {
+          "ok": true,
+          "call_id": 301
+        },
+        "is_multiple": false,
+        "error": null,
+        "llm_model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cached_input_tokens": null,
+        "data_deleted": false,
+        "timestamp": "2025-10-10T09:20:20.004Z"
+      },
+      "integration_id": "01926a93-064a-7a00-81b2-8ab78d5907e0",
+      "event_id": "01926f2b-2973-7ebf-ada1-e984251e27ec",
+      "trigger_interval": null,
+      "multi_event_behavior": "parallel",
+      "hidden_fields": [],
+      "integration": {
+        "id": "01926a93-064a-7a00-81b2-8ab78d5907e0",
+        "name": "Webhook",
+        "group": "built-in",
+        "icon": "/integrations/webhook.svg",
+        "description": "Connect your agents to external systems via REST APIs",
+        "docs_url": "https://docs.happyrobot.ai/integrations/webhook",
+        "website_url": "https://docs.happyrobot.ai/integrations/webhook",
+        "is_top": true,
+        "requires_credentials": false,
+        "agent_specific": false
+      },
+      "event": {
+        "id": "01926f2b-2973-7ebf-ada1-e984251e27ec",
+        "name": "POST",
+        "integration_id": "01926a93-064a-7a00-81b2-8ab78d5907e0",
+        "type": 1,
+        "description": "Execute  POST request to an endpoint.",
+        "is_instant": false,
+        "activity_name": "WebhookPost",
+        "task_queue": "go-worker",
+        "timeout_seconds": 300,
+        "retry_policy": {
+          "InitialInterval": 0,
+          "MaximumAttempts": 2,
           "BackoffCoefficient": 2
         },
         "wait_for_signal_seconds": 0,
